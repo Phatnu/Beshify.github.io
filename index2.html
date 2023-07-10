@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert Space to Icon</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-XXXXX" crossorigin="anonymous">
+</head>
+<body>
+  <input type="text" id="input-field" placeholder="Type here...">
+  <div id="icon-container"></div>
+
+  <script>
+    // Get the input field and icon container
+    const inputField = document.getElementById("input-field");
+    const iconContainer = document.getElementById("icon-container");
+
+    // Function to convert space to icon
+    function convertSpaceToIcon() {
+      const inputValue = inputField.value;
+      const icon = inputValue.replace(/ /g, "<i class='bi bi-x-circle'></i>");
+      iconContainer.innerHTML = icon;
+    }
+
+    // Add event listener for keyup event on the input field
+    inputField.addEventListener("keyup", convertSpaceToIcon);
+  </script>
+</body>
+</html>
